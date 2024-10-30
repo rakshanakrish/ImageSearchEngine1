@@ -27,11 +27,7 @@ Make sure you have the following packages installed:
 - NumPy
 - scikit-learn
 
-You can install the required packages using pip:
-
-```bash
-pip install Pillow matplotlib numpy scikit-learn
-
+You can install the required packages using pip
 
 # Image Similarity Search with MobileNetV2 (se2.py)
 
@@ -60,8 +56,38 @@ Ensure you have the following packages installed:
 - SQLite (Python's built-in library)
 
 You can install the required packages using pip:
+Getting Started
+Clone or download this repository.
+Prepare your SQLite database (DataB.db) with a table named DataB containing columns product_title and image_url.
+Make sure the images referenced in the database are accessible.
+Run the script:
+bash
+Copy code
+python your_script_name.py
+A file dialog will prompt you to select a query image from your local system.
+The program will extract features from the uploaded image and find similar images based on cosine similarity.
+Similar images will be displayed along with their titles and similarity scores.
+Code Explanation
+Feature Extraction: The MobileNetV2 model extracts feature vectors from images for similarity comparisons.
+Asynchronous Loading: Images are loaded and processed asynchronously to improve performance.
+Cosine Similarity: The application computes cosine similarity between the feature vectors of the query image and those in the dataset to identify similar images.
+Display Functionality: Matplotlib is used to visualize the query image alongside the similar images.
+Output
+The application displays the query image along with the top N similar images found in the dataset. The console output includes the product titles, URLs, and similarity scores for the similar images.
 
-```bash
-pip install tensorflow pillow numpy scikit-learn matplotlib
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgements
+MobileNetV2 for the convolutional neural network architecture.
+TensorFlow for the deep learning framework.
+Pillow for image handling.
+scikit-learn for cosine similarity computation.
+
+
+### Note:
+- Make sure to replace `"your_script_name.py"` with the actual filename of your script.
+- You can add sections like "Contributing," "Contact," or any other relevant information as needed.
+
 
 
